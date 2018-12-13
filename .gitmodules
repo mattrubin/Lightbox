@@ -4,3 +4,6 @@
 [submodule "Carthage/Checkouts/Cache"]
 	path = Carthage/Checkouts/Cache
 	url = https://github.com/hyperoslo/Cache.git
+[submodule "Carthage/Checkouts/xcconfigs"]
+	path = Carthage/Checkouts/xcconfigs
+	url = https://github.com/jspahrsummers/xcconfigs.git
