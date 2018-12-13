@@ -33,7 +33,7 @@ class PageView: UIScrollView {
     return button
   }()
 
-  lazy var loadingIndicator: UIView = LightboxConfig.makeLoadingIndicator()
+  lazy var loadingIndicator: UIView = LightboxConfig.default.makeLoadingIndicator()
 
   var image: LightboxImageProtocol
   var contentFrame = CGRect.zero
@@ -69,8 +69,8 @@ class PageView: UIScrollView {
 
     delegate = self
     isMultipleTouchEnabled = true
-    minimumZoomScale = LightboxConfig.Zoom.minimumScale
-    maximumZoomScale = LightboxConfig.Zoom.maximumScale
+    minimumZoomScale = LightboxConfig.default.zoom.minimumScale
+    maximumZoomScale = LightboxConfig.default.zoom.maximumScale
     showsHorizontalScrollIndicator = false
     showsVerticalScrollIndicator = false
 

@@ -212,7 +212,7 @@ open class LightboxController: UIViewController {
   }
 
   open override var prefersStatusBarHidden: Bool {
-    return LightboxConfig.hideStatusBar
+    return LightboxConfig.default.hideStatusBar
   }
 
   // MARK: - Rotation
@@ -337,7 +337,7 @@ open class LightboxController: UIViewController {
   // MARK: - Helper functions
   func calculatePreloadIndicies () -> [Int] {
     var preloadIndicies: [Int] = []
-    let preload = LightboxConfig.preload
+    let preload = LightboxConfig.default.preload
     if preload > 0 {
       let lb = max(0, currentPage - preload)
       let rb = min(initialImages.count, currentPage + preload)
@@ -401,7 +401,7 @@ extension LightboxController: PageViewDelegate {
   }
 
   func pageView(_ pageView: PageView, didTouchPlayButton videoURL: URL) {
-    LightboxConfig.handleVideo(self, videoURL)
+    LightboxConfig.default.handleVideo(self, videoURL)
   }
 
   func pageViewDidTouch(_ pageView: PageView) {

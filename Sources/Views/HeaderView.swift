@@ -8,14 +8,14 @@ protocol HeaderViewDelegate: class {
 open class HeaderView: UIView {
   open fileprivate(set) lazy var closeButton: UIButton = { [unowned self] in
     let title = NSAttributedString(
-      string: LightboxConfig.CloseButton.text,
-      attributes: LightboxConfig.CloseButton.textAttributes)
+      string: LightboxConfig.default.closeButton.text,
+      attributes: LightboxConfig.default.closeButton.textAttributes)
 
     let button = UIButton(type: .system)
 
     button.setAttributedTitle(title, for: UIControl.State())
 
-    if let size = LightboxConfig.CloseButton.size {
+    if let size = LightboxConfig.default.closeButton.size {
       button.frame.size = size
     } else {
       button.sizeToFit()
@@ -24,25 +24,25 @@ open class HeaderView: UIView {
     button.addTarget(self, action: #selector(closeButtonDidPress(_:)),
       for: .touchUpInside)
 
-    if let image = LightboxConfig.CloseButton.image {
+    if let image = LightboxConfig.default.closeButton.image {
         button.setBackgroundImage(image, for: UIControl.State())
     }
 
-    button.isHidden = !LightboxConfig.CloseButton.enabled
+    button.isHidden = !LightboxConfig.default.closeButton.enabled
 
     return button
   }()
 
   open fileprivate(set) lazy var deleteButton: UIButton = { [unowned self] in
     let title = NSAttributedString(
-      string: LightboxConfig.DeleteButton.text,
-      attributes: LightboxConfig.DeleteButton.textAttributes)
+      string: LightboxConfig.default.deleteButton.text,
+      attributes: LightboxConfig.default.deleteButton.textAttributes)
 
     let button = UIButton(type: .system)
 
     button.setAttributedTitle(title, for: .normal)
 
-    if let size = LightboxConfig.DeleteButton.size {
+    if let size = LightboxConfig.default.deleteButton.size {
       button.frame.size = size
     } else {
       button.sizeToFit()
@@ -51,11 +51,11 @@ open class HeaderView: UIView {
     button.addTarget(self, action: #selector(deleteButtonDidPress(_:)),
       for: .touchUpInside)
 
-    if let image = LightboxConfig.DeleteButton.image {
+    if let image = LightboxConfig.default.deleteButton.image {
         button.setBackgroundImage(image, for: UIControl.State())
     }
 
-    button.isHidden = !LightboxConfig.DeleteButton.enabled
+    button.isHidden = !LightboxConfig.default.deleteButton.enabled
 
     return button
   }()

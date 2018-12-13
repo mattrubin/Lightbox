@@ -44,7 +44,7 @@ open class LightboxImage: LightboxImageProtocol {
       imageView.image = image
       completion?(image)
     } else if let imageURL = imageURL {
-      LightboxConfig.loadImage(imageView, imageURL, completion)
+      LightboxConfig.default.loadImage(imageView, imageURL, completion)
     } else if let imageClosure = imageClosure {
       let img = imageClosure()
       imageView.image = img

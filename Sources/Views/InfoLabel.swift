@@ -17,7 +17,7 @@ open class InfoLabel: UILabel {
   open var numberOfVisibleLines = 2
 
   var ellipsis: String {
-    return "... \(LightboxConfig.InfoLabel.ellipsisText)"
+    return "... \(LightboxConfig.default.infoLabel.ellipsisText)"
   }
 
   open weak var delegate: InfoLabelDelegate?
@@ -111,11 +111,11 @@ open class InfoLabel: UILabel {
   }
 
   fileprivate func updateText(_ string: String) {
-    let textAttributes = LightboxConfig.InfoLabel.textAttributes
+    let textAttributes = LightboxConfig.default.infoLabel.textAttributes
     let attributedString = NSMutableAttributedString(string: string, attributes: textAttributes)
 
     if let range = string.range(of: ellipsis) {
-        let ellipsisColor = LightboxConfig.InfoLabel.ellipsisColor
+        let ellipsisColor = LightboxConfig.default.infoLabel.ellipsisColor
         let ellipsisRange = NSRange(range, in: string)
         attributedString.addAttribute(.foregroundColor, value: ellipsisColor, range: ellipsisRange)
     }
