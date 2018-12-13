@@ -261,7 +261,6 @@
 				TargetAttributes = {
 					D229B5E01FC3123F00F04123 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
 					};
 					D523B0A81C43AA2A001AD1EC = {
 						CreatedOnToolsVersion = 7.2;
