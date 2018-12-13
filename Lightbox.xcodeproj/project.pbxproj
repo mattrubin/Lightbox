@@ -84,18 +84,19 @@
 		D22006721DFB4D9700E92898 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D523B0AE1C43AA2A001AD1EC /* Info.plist */,
 				D22006731DFB4D9700E92898 /* Lightbox.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D229B5E21FC3123F00F04123 /* Lightbox-iOS-Tests */ = {
+		D229B5E21FC3123F00F04123 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				D229B5E51FC3123F00F04123 /* Info.plist */,
 				D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */,
 			);
-			path = "Lightbox-iOS-Tests";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		D2A58F5C1F7943A30064F14E /* Frameworks */ = {
@@ -109,10 +110,9 @@
 		D523B09F1C43AA2A001AD1EC = {
 			isa = PBXGroup;
 			children = (
+				D523B0B41C43AA8A001AD1EC /* Sources */,
 				D22006721DFB4D9700E92898 /* Resources */,
-				D523B0B41C43AA8A001AD1EC /* Source */,
-				D523B0AB1C43AA2A001AD1EC /* Lightbox */,
-				D229B5E21FC3123F00F04123 /* Lightbox-iOS-Tests */,
+				D229B5E21FC3123F00F04123 /* Tests */,
 				D2A58F5C1F7943A30064F14E /* Frameworks */,
 				D523B0AA1C43AA2A001AD1EC /* Products */,
 			);
@@ -129,15 +129,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D523B0AB1C43AA2A001AD1EC /* Lightbox */ = {
-			isa = PBXGroup;
-			children = (
-				D523B0AE1C43AA2A001AD1EC /* Info.plist */,
-			);
-			path = Lightbox;
-			sourceTree = "<group>";
-		};
-		D523B0B41C43AA8A001AD1EC /* Source */ = {
+		D523B0B41C43AA8A001AD1EC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				D573A2F11C5B5C72006053DD /* Library */,
@@ -148,7 +140,7 @@
 				166E3BA820333E04006799C1 /* LightboxImageStub.swift */,
 				D2D71BBB1D54DA77006AB907 /* AssetManager.swift */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D54DFCBB1C5AAAD600ADEA0E /* Views */ = {
