@@ -5,6 +5,12 @@
       location = "group:DemoLightbox.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:../../Carthage/Checkouts/Cache/Cache.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../Carthage/Checkouts/Imaginary/Imaginary.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../Lightbox.xcodeproj">
    </FileRef>
 </Workspace>
