@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/Imaginary"]
+	path = Carthage/Checkouts/Imaginary
+	url = https://github.com/hyperoslo/Imaginary.git
+[submodule "Carthage/Checkouts/Cache"]
+	path = Carthage/Checkouts/Cache
+	url = https://github.com/hyperoslo/Cache.git
