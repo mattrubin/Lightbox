@@ -44,7 +44,7 @@
 		D229B5E11FC3123F00F04123 /* Lightbox-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lightbox-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D229B5E51FC3123F00F04123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelTests.swift; sourceTree = "<group>"; };
-		D2A58F5D1F7943A30064F14E /* Imaginary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imaginary.framework; path = Carthage/Build/iOS/Imaginary.framework; sourceTree = "<group>"; };
+		D2A58F5D1F7943A30064F14E /* Imaginary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Imaginary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D71BBB1D54DA77006AB907 /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		D5026B3B1C5BF3FD003BC1A3 /* LightboxImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightboxImage.swift; sourceTree = "<group>"; };
 		D523B0A91C43AA2A001AD1EC /* Lightbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lightbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,8 +113,8 @@
 				D523B0B41C43AA8A001AD1EC /* Source */,
 				D523B0AB1C43AA2A001AD1EC /* Lightbox */,
 				D229B5E21FC3123F00F04123 /* Lightbox-iOS-Tests */,
-				D523B0AA1C43AA2A001AD1EC /* Products */,
 				D2A58F5C1F7943A30064F14E /* Frameworks */,
+				D523B0AA1C43AA2A001AD1EC /* Products */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
