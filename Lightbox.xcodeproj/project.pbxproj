@@ -41,7 +41,7 @@
 		166E3BA820333E04006799C1 /* LightboxImageStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightboxImageStub.swift; sourceTree = "<group>"; };
 		D22006731DFB4D9700E92898 /* Lightbox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Lightbox.bundle; sourceTree = "<group>"; };
 		D2258CC3215CD035005A9A1C /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		D229B5E11FC3123F00F04123 /* Lightbox-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lightbox-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D229B5E11FC3123F00F04123 /* LightboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D229B5E51FC3123F00F04123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelTests.swift; sourceTree = "<group>"; };
 		D2A58F5D1F7943A30064F14E /* Imaginary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Imaginary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,18 +84,19 @@
 		D22006721DFB4D9700E92898 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D523B0AE1C43AA2A001AD1EC /* Info.plist */,
 				D22006731DFB4D9700E92898 /* Lightbox.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D229B5E21FC3123F00F04123 /* Lightbox-iOS-Tests */ = {
+		D229B5E21FC3123F00F04123 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				D229B5E51FC3123F00F04123 /* Info.plist */,
 				D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */,
 			);
-			path = "Lightbox-iOS-Tests";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		D2A58F5C1F7943A30064F14E /* Frameworks */ = {
@@ -109,10 +110,9 @@
 		D523B09F1C43AA2A001AD1EC = {
 			isa = PBXGroup;
 			children = (
+				D523B0B41C43AA8A001AD1EC /* Sources */,
 				D22006721DFB4D9700E92898 /* Resources */,
-				D523B0B41C43AA8A001AD1EC /* Source */,
-				D523B0AB1C43AA2A001AD1EC /* Lightbox */,
-				D229B5E21FC3123F00F04123 /* Lightbox-iOS-Tests */,
+				D229B5E21FC3123F00F04123 /* Tests */,
 				D2A58F5C1F7943A30064F14E /* Frameworks */,
 				D523B0AA1C43AA2A001AD1EC /* Products */,
 			);
@@ -124,20 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				D523B0A91C43AA2A001AD1EC /* Lightbox.framework */,
-				D229B5E11FC3123F00F04123 /* Lightbox-iOS-Tests.xctest */,
+				D229B5E11FC3123F00F04123 /* LightboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D523B0AB1C43AA2A001AD1EC /* Lightbox */ = {
-			isa = PBXGroup;
-			children = (
-				D523B0AE1C43AA2A001AD1EC /* Info.plist */,
-			);
-			path = Lightbox;
-			sourceTree = "<group>";
-		};
-		D523B0B41C43AA8A001AD1EC /* Source */ = {
+		D523B0B41C43AA8A001AD1EC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				D573A2F11C5B5C72006053DD /* Library */,
@@ -148,7 +140,7 @@
 				166E3BA820333E04006799C1 /* LightboxImageStub.swift */,
 				D2D71BBB1D54DA77006AB907 /* AssetManager.swift */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D54DFCBB1C5AAAD600ADEA0E /* Views */ = {
@@ -187,9 +179,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D229B5E01FC3123F00F04123 /* Lightbox-iOS-Tests */ = {
+		D229B5E01FC3123F00F04123 /* LightboxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D229B5E91FC3123F00F04123 /* Build configuration list for PBXNativeTarget "Lightbox-iOS-Tests" */;
+			buildConfigurationList = D229B5E91FC3123F00F04123 /* Build configuration list for PBXNativeTarget "LightboxTests" */;
 			buildPhases = (
 				D229B5DD1FC3123F00F04123 /* Sources */,
 				D229B5DE1FC3123F00F04123 /* Frameworks */,
@@ -200,14 +192,14 @@
 			dependencies = (
 				D229B5E81FC3123F00F04123 /* PBXTargetDependency */,
 			);
-			name = "Lightbox-iOS-Tests";
+			name = LightboxTests;
 			productName = "Lightbox-iOS-Tests";
-			productReference = D229B5E11FC3123F00F04123 /* Lightbox-iOS-Tests.xctest */;
+			productReference = D229B5E11FC3123F00F04123 /* LightboxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D523B0A81C43AA2A001AD1EC /* Lightbox-iOS */ = {
+		D523B0A81C43AA2A001AD1EC /* Lightbox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D523B0B11C43AA2A001AD1EC /* Build configuration list for PBXNativeTarget "Lightbox-iOS" */;
+			buildConfigurationList = D523B0B11C43AA2A001AD1EC /* Build configuration list for PBXNativeTarget "Lightbox" */;
 			buildPhases = (
 				D523B0A41C43AA2A001AD1EC /* Sources */,
 				D523B0A51C43AA2A001AD1EC /* Frameworks */,
@@ -218,7 +210,7 @@
 			);
 			dependencies = (
 			);
-			name = "Lightbox-iOS";
+			name = Lightbox;
 			productName = Lightbox;
 			productReference = D523B0A91C43AA2A001AD1EC /* Lightbox.framework */;
 			productType = "com.apple.product-type.framework";
@@ -255,8 +247,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D523B0A81C43AA2A001AD1EC /* Lightbox-iOS */,
-				D229B5E01FC3123F00F04123 /* Lightbox-iOS-Tests */,
+				D523B0A81C43AA2A001AD1EC /* Lightbox */,
+				D229B5E01FC3123F00F04123 /* LightboxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +306,7 @@
 /* Begin PBXTargetDependency section */
 		D229B5E81FC3123F00F04123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D523B0A81C43AA2A001AD1EC /* Lightbox-iOS */;
+			target = D523B0A81C43AA2A001AD1EC /* Lightbox */;
 			targetProxy = D229B5E71FC3123F00F04123 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -331,10 +323,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Lightbox-iOS-Tests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Lightbox-iOS-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantageek.LightboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -352,10 +344,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Lightbox-iOS-Tests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Lightbox-iOS-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantageek.LightboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -485,7 +477,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Lightbox/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -507,7 +499,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Lightbox/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -520,7 +512,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D229B5E91FC3123F00F04123 /* Build configuration list for PBXNativeTarget "Lightbox-iOS-Tests" */ = {
+		D229B5E91FC3123F00F04123 /* Build configuration list for PBXNativeTarget "LightboxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D229B5EA1FC3123F00F04123 /* Debug */,
@@ -538,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D523B0B11C43AA2A001AD1EC /* Build configuration list for PBXNativeTarget "Lightbox-iOS" */ = {
+		D523B0B11C43AA2A001AD1EC /* Build configuration list for PBXNativeTarget "Lightbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D523B0B21C43AA2A001AD1EC /* Debug */,
