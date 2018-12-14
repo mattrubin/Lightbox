@@ -12,7 +12,7 @@ public protocol LightboxControllerDismissalDelegate: class {
 
 public protocol LightboxControllerTouchDelegate: class {
 
-  func lightboxController(_ controller: LightboxController, didTouch image: LightboxImage, at index: Int)
+  func lightboxController(_ controller: LightboxController, didTouch image: LightboxImageProtocol, at index: Int)
 }
 
 open class LightboxController: UIViewController {
@@ -126,7 +126,7 @@ open class LightboxController: UIViewController {
     }
   }
 
-  open var images: [LightboxImage] {
+  open var images: [LightboxImageProtocol] {
     get {
       return pageViews.map { $0.image }
     }
@@ -146,12 +146,12 @@ open class LightboxController: UIViewController {
   var pageViews = [PageView]()
   var statusBarHidden = false
 
-  fileprivate var initialImages: [LightboxImage]
+  fileprivate var initialImages: [LightboxImageProtocol]
   fileprivate let initialPage: Int
 
   // MARK: - Initializers
 
-  public init(images: [LightboxImage] = [], startIndex index: Int = 0) {
+  public init(images: [LightboxImageProtocol] = [], startIndex index: Int = 0) {
     self.initialImages = images
     self.initialPage = index
     super.init(nibName: nil, bundle: nil)
@@ -227,7 +227,7 @@ open class LightboxController: UIViewController {
 
   // MARK: - Configuration
 
-  func configurePages(_ images: [LightboxImage]) {
+  func configurePages(_ images: [LightboxImageProtocol]) {
     pageViews.forEach { $0.removeFromSuperview() }
     pageViews = []
 
