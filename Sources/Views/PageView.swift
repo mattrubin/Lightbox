@@ -35,7 +35,7 @@ class PageView: UIScrollView {
 
   lazy var loadingIndicator: UIView = LightboxConfig.makeLoadingIndicator()
 
-  var image: LightboxImage
+  var image: LightboxImageProtocol
   var contentFrame = CGRect.zero
   weak var pageViewDelegate: PageViewDelegate?
 
@@ -45,7 +45,7 @@ class PageView: UIScrollView {
 
   // MARK: - Initializers
 
-  init(image: LightboxImage) {
+  init(image: LightboxImageProtocol) {
     self.image = image
     super.init(frame: CGRect.zero)
 
@@ -86,7 +86,7 @@ class PageView: UIScrollView {
   }
 
   // MARK: - Update
-  func update(with image: LightboxImage) {
+  func update(with image: LightboxImageProtocol) {
     self.image = image
     updatePlayButton()
     fetchImage()

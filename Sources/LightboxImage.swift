@@ -1,6 +1,13 @@
 import UIKit
 
-open class LightboxImage {
+public protocol LightboxImageProtocol {
+  var videoURL: URL? { get }
+  var text: String { get }
+
+  func addImageTo(_ imageView: UIImageView, completion: ((UIImage?) -> Void)?)
+}
+
+open class LightboxImage: LightboxImageProtocol {
 
   open fileprivate(set) var image: UIImage?
   open fileprivate(set) var imageURL: URL?
