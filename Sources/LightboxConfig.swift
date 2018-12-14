@@ -1,7 +1,6 @@
 import UIKit
 import AVKit
 import AVFoundation
-import Imaginary
 
 public class LightboxConfig {
   /// Whether to show status bar while Lightbox is presented
@@ -21,7 +20,7 @@ public class LightboxConfig {
   public static var loadImage: (UIImageView, URL, ((UIImage?) -> Void)?) -> Void = { (imageView, imageURL, completion) in
 
     // Use Imaginary by default
-    imageView.setImage(url: imageURL, placeholder: nil, completion: { result in
+    imageView.setImage(url: imageURL, completion: { result in
       switch result {
       case .value(let image):
         completion?(image)

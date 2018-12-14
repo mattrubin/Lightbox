@@ -13,10 +13,6 @@
 		29B4A4371C43A4320060ED52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29B4A4351C43A4320060ED52 /* LaunchScreen.storyboard */; };
 		C92EBD3F21C2ED47002EEFF9 /* Lightbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92EBD3E21C2ED3E002EEFF9 /* Lightbox.framework */; };
 		C92EBD4021C2ED47002EEFF9 /* Lightbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C92EBD3E21C2ED3E002EEFF9 /* Lightbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C92EBD4A21C2EF3B002EEFF9 /* Imaginary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92EBD4921C2EF2E002EEFF9 /* Imaginary.framework */; };
-		C92EBD4B21C2EF3B002EEFF9 /* Imaginary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C92EBD4921C2EF2E002EEFF9 /* Imaginary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C92EBD5021C2EF79002EEFF9 /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92EBD4F21C2EF71002EEFF9 /* Cache.framework */; };
-		C92EBD5121C2EF79002EEFF9 /* Cache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C92EBD4F21C2EF71002EEFF9 /* Cache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C92EBD5121C2EF79002EEFF9 /* Cache.framework in Embed Frameworks */,
-				C92EBD4B21C2EF3B002EEFF9 /* Imaginary.framework in Embed Frameworks */,
 				C92EBD4021C2ED47002EEFF9 /* Lightbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -43,8 +37,6 @@
 		29B4A4361C43A4320060ED52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29B4A4381C43A4320060ED52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C92EBD3E21C2ED3E002EEFF9 /* Lightbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lightbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C92EBD4921C2EF2E002EEFF9 /* Imaginary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Imaginary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C92EBD4F21C2EF71002EEFF9 /* Cache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C92EBD5021C2EF79002EEFF9 /* Cache.framework in Frameworks */,
-				C92EBD4A21C2EF3B002EEFF9 /* Imaginary.framework in Frameworks */,
 				C92EBD3F21C2ED47002EEFF9 /* Lightbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,8 +85,6 @@
 		B1B2B3DADEEC7FD14D4A9FF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C92EBD4F21C2EF71002EEFF9 /* Cache.framework */,
-				C92EBD4921C2EF2E002EEFF9 /* Imaginary.framework */,
 				C92EBD3E21C2ED3E002EEFF9 /* Lightbox.framework */,
 			);
 			name = Frameworks;

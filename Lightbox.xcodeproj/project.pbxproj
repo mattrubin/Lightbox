@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		166E3BA920333E04006799C1 /* LightboxImageStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E3BA820333E04006799C1 /* LightboxImageStub.swift */; };
+		C926B61121C3702400D68ED1 /* View+Imaginary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926B60F21C3702400D68ED1 /* View+Imaginary.swift */; };
+		C926B61221C3702400D68ED1 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926B61021C3702400D68ED1 /* ImageFetcher.swift */; };
 		D22006741DFB4D9700E92898 /* Lightbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22006731DFB4D9700E92898 /* Lightbox.bundle */; };
 		D2258CC4215CD035005A9A1C /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2258CC3215CD035005A9A1C /* Color+Extensions.swift */; };
 		D229B5E61FC3123F00F04123 /* Lightbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D523B0A91C43AA2A001AD1EC /* Lightbox.framework */; };
 		D229B5ED1FC3125D00F04123 /* InfoLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */; };
-		D2A58F5E1F7943A30064F14E /* Imaginary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A58F5D1F7943A30064F14E /* Imaginary.framework */; };
 		D2D71BBC1D54DA77006AB907 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D71BBB1D54DA77006AB907 /* AssetManager.swift */; };
 		D5026B3C1C5BF3FD003BC1A3 /* LightboxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5026B3B1C5BF3FD003BC1A3 /* LightboxImage.swift */; };
 		D523B0BD1C43AA8B001AD1EC /* LightboxConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D523B0B61C43AA8A001AD1EC /* LightboxConfig.swift */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		166E3BA820333E04006799C1 /* LightboxImageStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightboxImageStub.swift; sourceTree = "<group>"; };
+		C926B60F21C3702400D68ED1 /* View+Imaginary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Imaginary.swift"; sourceTree = "<group>"; };
+		C926B61021C3702400D68ED1 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		C9B631D721C30FF8005436BC /* iOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Framework.xcconfig"; sourceTree = "<group>"; };
 		C9B631D821C30FF8005436BC /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
 		C9B631DA21C30FF8005436BC /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		D229B5E11FC3123F00F04123 /* LightboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D229B5E51FC3123F00F04123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelTests.swift; sourceTree = "<group>"; };
-		D2A58F5D1F7943A30064F14E /* Imaginary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Imaginary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D71BBB1D54DA77006AB907 /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		D5026B3B1C5BF3FD003BC1A3 /* LightboxImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightboxImage.swift; sourceTree = "<group>"; };
 		D523B0A91C43AA2A001AD1EC /* Lightbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lightbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,13 +80,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2A58F5E1F7943A30064F14E /* Imaginary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C926B60E21C3702400D68ED1 /* Imaginary */ = {
+			isa = PBXGroup;
+			children = (
+				C926B60F21C3702400D68ED1 /* View+Imaginary.swift */,
+				C926B61021C3702400D68ED1 /* ImageFetcher.swift */,
+			);
+			name = Imaginary;
+			path = Sources/Imaginary;
+			sourceTree = SOURCE_ROOT;
+		};
 		C9B631D521C30FF8005436BC /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,14 +143,6 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		D2A58F5C1F7943A30064F14E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D2A58F5D1F7943A30064F14E /* Imaginary.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D523B09F1C43AA2A001AD1EC = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +150,6 @@
 				D22006721DFB4D9700E92898 /* Resources */,
 				D229B5E21FC3123F00F04123 /* Tests */,
 				C9B631D521C30FF8005436BC /* Configurations */,
-				D2A58F5C1F7943A30064F14E /* Frameworks */,
 				D523B0AA1C43AA2A001AD1EC /* Products */,
 			);
 			indentWidth = 4;
@@ -166,6 +168,7 @@
 		D523B0B41C43AA8A001AD1EC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C926B60E21C3702400D68ED1 /* Imaginary */,
 				D573A2F11C5B5C72006053DD /* Library */,
 				D54DFCBB1C5AAAD600ADEA0E /* Views */,
 				D523B0B61C43AA8A001AD1EC /* LightboxConfig.swift */,
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D56F15C81E0AB79800F128AF /* LoadingIndicator.swift in Sources */,
+				C926B61221C3702400D68ED1 /* ImageFetcher.swift in Sources */,
 				D54DFCBF1C5AAAD600ADEA0E /* PageView.swift in Sources */,
 				D573A2F71C5B5E55006053DD /* UIView+Gradient.swift in Sources */,
 				D523B0BD1C43AA8B001AD1EC /* LightboxConfig.swift in Sources */,
@@ -330,6 +334,7 @@
 				D573A2F51C5B5CA4006053DD /* LightboxTransition.swift in Sources */,
 				D2258CC4215CD035005A9A1C /* Color+Extensions.swift in Sources */,
 				166E3BA920333E04006799C1 /* LightboxImageStub.swift in Sources */,
+				C926B61121C3702400D68ED1 /* View+Imaginary.swift in Sources */,
 				D2D71BBC1D54DA77006AB907 /* AssetManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
