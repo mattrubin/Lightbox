@@ -5,9 +5,6 @@
       location = "container:Lightbox.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Carthage/Checkouts/Cache/Cache.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Carthage/Checkouts/Imaginary/Imaginary.xcodeproj">
    </FileRef>
 </Workspace>
