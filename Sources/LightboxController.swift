@@ -61,7 +61,7 @@ open class LightboxController: UIViewController {
   }()
 
   open fileprivate(set) lazy var footerView: FooterView = { [unowned self] in
-    let view = FooterView()
+    let view = FooterView(config: LightboxConfig.default)
     view.delegate = self
 
     return view

@@ -6,12 +6,13 @@ public protocol FooterViewDelegate: class {
 }
 
 open class FooterView: UIView {
+  let config: LightboxConfig
 
   open fileprivate(set) lazy var infoLabel: InfoLabel = { [unowned self] in
-    let label = InfoLabel(text: "", config: LightboxConfig.default.infoLabel)
-    label.isHidden = !LightboxConfig.default.infoLabel.enabled
+    let label = InfoLabel(text: "", config: config.infoLabel)
+    label.isHidden = !config.infoLabel.enabled
 
-    label.textColor = LightboxConfig.default.infoLabel.textColor
+    label.textColor = config.infoLabel.textColor
     label.isUserInteractionEnabled = true
     label.delegate = self
 
@@ -20,7 +21,7 @@ open class FooterView: UIView {
 
   open fileprivate(set) lazy var pageLabel: UILabel = { [unowned self] in
     let label = UILabel(frame: CGRect.zero)
-    label.isHidden = !LightboxConfig.default.pageIndicator.enabled
+    label.isHidden = !config.pageIndicator.enabled
     label.numberOfLines = 1
 
     return label
@@ -28,8 +29,8 @@ open class FooterView: UIView {
 
   open fileprivate(set) lazy var separatorView: UIView = { [unowned self] in
     let view = UILabel(frame: CGRect.zero)
-    view.isHidden = !LightboxConfig.default.pageIndicator.enabled
-    view.backgroundColor = LightboxConfig.default.pageIndicator.separatorColor
+    view.isHidden = !config.pageIndicator.enabled
+    view.backgroundColor = config.pageIndicator.separatorColor
 
     return view
   }()
@@ -39,7 +40,9 @@ open class FooterView: UIView {
 
   // MARK: - Initializers
 
-  public init() {
+  public init(config: LightboxConfig) {
+    self.config = config
+
     super.init(frame: CGRect.zero)
 
     backgroundColor = UIColor.clear
@@ -62,7 +65,7 @@ open class FooterView: UIView {
     let text = "\(page)/\(numberOfPages)"
 
     pageLabel.attributedText = NSAttributedString(string: text,
-      attributes: LightboxConfig.default.pageIndicator.textAttributes)
+      attributes: config.pageIndicator.textAttributes)
     pageLabel.sizeToFit()
   }
 
