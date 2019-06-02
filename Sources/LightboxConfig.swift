@@ -2,7 +2,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
-public class LightboxConfig {
+public struct LightboxConfig {
   public static var `default` = LightboxConfig()
 
   /// Whether to show status bar while Lightbox is presented
