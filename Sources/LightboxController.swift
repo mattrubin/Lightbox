@@ -54,7 +54,7 @@ open class LightboxController: UIViewController {
   // MARK: - Public views
 
   open fileprivate(set) lazy var headerView: HeaderView = { [unowned self] in
-    let view = HeaderView()
+    let view = HeaderView(config: LightboxConfig.default)
     view.delegate = self
 
     return view
