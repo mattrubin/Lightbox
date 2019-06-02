@@ -8,7 +8,7 @@ public protocol FooterViewDelegate: class {
 open class FooterView: UIView {
 
   open fileprivate(set) lazy var infoLabel: InfoLabel = { [unowned self] in
-    let label = InfoLabel(text: "")
+    let label = InfoLabel(text: "", config: LightboxConfig.default.infoLabel)
     label.isHidden = !LightboxConfig.default.infoLabel.enabled
 
     label.textColor = LightboxConfig.default.infoLabel.textColor
