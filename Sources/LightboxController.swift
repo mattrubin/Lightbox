@@ -234,7 +234,8 @@ open class LightboxController: UIViewController {
     let preloadIndicies = calculatePreloadIndicies()
 
     for i in 0..<images.count {
-      let pageView = PageView(image: preloadIndicies.contains(i) ? images[i] : LightboxImageStub())
+      let pageView = PageView(image: preloadIndicies.contains(i) ? images[i] : LightboxImageStub(),
+                              config: LightboxConfig.default)
       pageView.pageViewDelegate = self
 
       scrollView.addSubview(pageView)
