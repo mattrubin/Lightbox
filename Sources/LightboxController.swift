@@ -16,6 +16,7 @@ public protocol LightboxControllerTouchDelegate: class {
 }
 
 open class LightboxController: UIViewController {
+  let config: LightboxConfig
 
   // MARK: - Internal views
 
@@ -54,14 +55,14 @@ open class LightboxController: UIViewController {
   // MARK: - Public views
 
   open fileprivate(set) lazy var headerView: HeaderView = { [unowned self] in
-    let view = HeaderView(config: LightboxConfig.default)
+    let view = HeaderView(config: config)
     view.delegate = self
 
     return view
   }()
 
   open fileprivate(set) lazy var footerView: FooterView = { [unowned self] in
-    let view = FooterView(config: LightboxConfig.default)
+    let view = FooterView(config: config)
     view.delegate = self
 
     return view
@@ -151,9 +152,11 @@ open class LightboxController: UIViewController {
 
   // MARK: - Initializers
 
-  public init(images: [LightboxImageProtocol] = [], startIndex index: Int = 0) {
+  public init(images: [LightboxImageProtocol] = [], startIndex index: Int = 0, config: LightboxConfig = .default) {
     self.initialImages = images
     self.initialPage = index
+    self.config = config
+
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -212,7 +215,7 @@ open class LightboxController: UIViewController {
   }
 
   open override var prefersStatusBarHidden: Bool {
-    return LightboxConfig.default.hideStatusBar
+    return config.hideStatusBar
   }
 
   // MARK: - Rotation
@@ -235,7 +238,7 @@ open class LightboxController: UIViewController {
 
     for i in 0..<images.count {
       let pageView = PageView(image: preloadIndicies.contains(i) ? images[i] : LightboxImageStub(),
-                              config: LightboxConfig.default)
+                              config: config)
       pageView.pageViewDelegate = self
 
       scrollView.addSubview(pageView)
@@ -338,7 +341,7 @@ open class LightboxController: UIViewController {
   // MARK: - Helper functions
   func calculatePreloadIndicies () -> [Int] {
     var preloadIndicies: [Int] = []
-    let preload = LightboxConfig.default.preload
+    let preload = config.preload
     if preload > 0 {
       let lb = max(0, currentPage - preload)
       let rb = min(initialImages.count, currentPage + preload)
@@ -402,7 +405,7 @@ extension LightboxController: PageViewDelegate {
   }
 
   func pageView(_ pageView: PageView, didTouchPlayButton videoURL: URL) {
-    LightboxConfig.default.handleVideo(self, videoURL)
+    config.handleVideo(self, videoURL)
   }
 
   func pageViewDidTouch(_ pageView: PageView) {
