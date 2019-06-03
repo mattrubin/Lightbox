@@ -273,10 +273,11 @@
 			};
 			buildConfigurationList = D523B0A31C43AA2A001AD1EC /* Build configuration list for PBXProject "Lightbox" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D523B09F1C43AA2A001AD1EC;
 			productRefGroup = D523B0AA1C43AA2A001AD1EC /* Products */;
