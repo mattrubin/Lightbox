@@ -65,7 +65,7 @@ open class FooterView: UIView {
     let text = "\(page)/\(numberOfPages)"
 
     pageLabel.attributedText = NSAttributedString(string: text,
-      attributes: config.pageIndicator.textAttributes)
+                                                  attributes: config.pageIndicator.textAttributes)
     pageLabel.sizeToFit()
   }
 

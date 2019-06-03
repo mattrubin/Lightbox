@@ -51,7 +51,7 @@ open class InfoLabel: UILabel {
 
     // Perform quick "rough cut"
     while numberOfLines(truncatedText) > numberOfVisibleLines * 2 {
-        truncatedText = String(truncatedText.prefix(truncatedText.count / 2))
+      truncatedText = String(truncatedText.prefix(truncatedText.count / 2))
     }
 
     // Capture the endIndex of truncatedText before appending ellipsis
@@ -117,9 +117,9 @@ open class InfoLabel: UILabel {
     let attributedString = NSMutableAttributedString(string: string, attributes: textAttributes)
 
     if let range = string.range(of: ellipsis) {
-        let ellipsisColor = config.ellipsisColor
-        let ellipsisRange = NSRange(range, in: string)
-        attributedString.addAttribute(.foregroundColor, value: ellipsisColor, range: ellipsisRange)
+      let ellipsisColor = config.ellipsisColor
+      let ellipsisRange = NSRange(range, in: string)
+      attributedString.addAttribute(.foregroundColor, value: ellipsisColor, range: ellipsisRange)
     }
 
     attributedText = attributedString

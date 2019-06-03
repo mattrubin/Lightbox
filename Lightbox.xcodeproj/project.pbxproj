@@ -152,9 +152,10 @@
 				C9B631D521C30FF8005436BC /* Configurations */,
 				D523B0AA1C43AA2A001AD1EC /* Products */,
 			);
-			indentWidth = 4;
+			indentWidth = 2;
 			sourceTree = "<group>";
 			tabWidth = 4;
+			usesTabs = 0;
 		};
 		D523B0AA1C43AA2A001AD1EC /* Products */ = {
 			isa = PBXGroup;

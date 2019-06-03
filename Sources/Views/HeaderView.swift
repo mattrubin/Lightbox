@@ -24,10 +24,10 @@ open class HeaderView: UIView {
     }
 
     button.addTarget(self, action: #selector(closeButtonDidPress(_:)),
-      for: .touchUpInside)
+                     for: .touchUpInside)
 
     if let image = config.closeButton.image {
-        button.setBackgroundImage(image, for: UIControl.State())
+      button.setBackgroundImage(image, for: UIControl.State())
     }
 
     button.isHidden = !config.closeButton.enabled
@@ -51,10 +51,10 @@ open class HeaderView: UIView {
     }
 
     button.addTarget(self, action: #selector(deleteButtonDidPress(_:)),
-      for: .touchUpInside)
+                     for: .touchUpInside)
 
     if let image = config.deleteButton.image {
-        button.setBackgroundImage(image, for: UIControl.State())
+      button.setBackgroundImage(image, for: UIControl.State())
     }
 
     button.isHidden = !config.deleteButton.enabled
@@ -68,7 +68,7 @@ open class HeaderView: UIView {
 
   public init(config: LightboxConfig) {
     self.config = config
-    
+
     super.init(frame: CGRect.zero)
 
     backgroundColor = UIColor.clear
