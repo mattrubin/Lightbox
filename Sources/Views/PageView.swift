@@ -9,6 +9,7 @@ protocol PageViewDelegate: class {
 }
 
 class PageView: UIScrollView {
+  let config: LightboxConfig
 
   lazy var imageView: UIImageView = {
     let imageView = UIImageView()
@@ -33,7 +34,7 @@ class PageView: UIScrollView {
     return button
   }()
 
-  lazy var loadingIndicator: UIView = LightboxConfig.makeLoadingIndicator()
+  lazy var loadingIndicator: UIView = config.makeLoadingIndicator()
 
   var image: LightboxImageProtocol
   var contentFrame = CGRect.zero
@@ -45,8 +46,10 @@ class PageView: UIScrollView {
 
   // MARK: - Initializers
 
-  init(image: LightboxImageProtocol) {
+  init(image: LightboxImageProtocol, config: LightboxConfig) {
     self.image = image
+    self.config = config
+
     super.init(frame: CGRect.zero)
 
     configure()
@@ -69,8 +72,8 @@ class PageView: UIScrollView {
 
     delegate = self
     isMultipleTouchEnabled = true
-    minimumZoomScale = LightboxConfig.Zoom.minimumScale
-    maximumZoomScale = LightboxConfig.Zoom.maximumScale
+    minimumZoomScale = config.zoom.minimumScale
+    maximumZoomScale = config.zoom.maximumScale
     showsHorizontalScrollIndicator = false
     showsVerticalScrollIndicator = false
 

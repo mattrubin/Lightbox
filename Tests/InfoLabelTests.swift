@@ -3,7 +3,7 @@ import XCTest
 
 class InfoLabelTests: XCTestCase {
   func testTruncating() {
-    let label = InfoLabel(text: "", expanded: false)
+    let label = InfoLabel(text: "", expanded: false, config: LightboxConfig.default.infoLabel)
     label.frame.size = CGSize(width: 10, height: 10)
 
     let text = Array(repeating: "A", count: 4).joined(separator: "")

@@ -6,6 +6,7 @@ public protocol InfoLabelDelegate: class {
 }
 
 open class InfoLabel: UILabel {
+  let config: LightboxConfig.InfoLabel
 
   lazy var tapGestureRecognizer: UITapGestureRecognizer = { [unowned self] in
     let gesture = UITapGestureRecognizer()
@@ -17,7 +18,7 @@ open class InfoLabel: UILabel {
   open var numberOfVisibleLines = 2
 
   var ellipsis: String {
-    return "... \(LightboxConfig.InfoLabel.ellipsisText)"
+    return "... \(config.ellipsisText)"
   }
 
   open weak var delegate: InfoLabelDelegate?
@@ -74,8 +75,9 @@ open class InfoLabel: UILabel {
 
   // MARK: - Initialization
 
-  public init(text: String, expanded: Bool = false) {
+  public init(text: String, expanded: Bool = false, config: LightboxConfig.InfoLabel) {
     self.fullText = text
+    self.config = config
     super.init(frame: CGRect.zero)
 
     numberOfLines = 0
@@ -111,11 +113,11 @@ open class InfoLabel: UILabel {
   }
 
   fileprivate func updateText(_ string: String) {
-    let textAttributes = LightboxConfig.InfoLabel.textAttributes
+    let textAttributes = config.textAttributes
     let attributedString = NSMutableAttributedString(string: string, attributes: textAttributes)
 
     if let range = string.range(of: ellipsis) {
-        let ellipsisColor = LightboxConfig.InfoLabel.ellipsisColor
+        let ellipsisColor = config.ellipsisColor
         let ellipsisRange = NSRange(range, in: string)
         attributedString.addAttribute(.foregroundColor, value: ellipsisColor, range: ellipsisRange)
     }
