@@ -17,6 +17,8 @@ class PageView: UIScrollView {
     imageView.clipsToBounds = true
     imageView.isUserInteractionEnabled = true
 
+    imageView.layer.minificationFilter = .trilinear
+
     return imageView
   }()
 
