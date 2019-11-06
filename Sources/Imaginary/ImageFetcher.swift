@@ -38,11 +38,11 @@ public class ImageFetcher {
   ///   - url: The url to fetch.
   ///   - completion: The callback upon completion.
   public func fetch(url: URL, completion: @escaping (Result) -> Void) {
-      if url.isFileURL {
-        self.fetchFromDisk(url: url, completion: completion)
-      } else {
-        self.fetchFromNetwork(url: url, completion: completion)
-      }
+    if url.isFileURL {
+      self.fetchFromDisk(url: url, completion: completion)
+    } else {
+      self.fetchFromNetwork(url: url, completion: completion)
+    }
   }
 
   // MARK: - Helper
@@ -52,7 +52,7 @@ public class ImageFetcher {
 
     let request = URLRequest(url: url)
     self.task = URLSession.shared.dataTask(with: request,
-                                      completionHandler: { [weak self] data, response, error in
+                                           completionHandler: { [weak self] data, response, error in
       guard let `self` = self, self.active else {
         return
       }

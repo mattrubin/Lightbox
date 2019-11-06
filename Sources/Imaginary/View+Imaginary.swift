@@ -32,7 +32,7 @@ extension UIImageView {
           }, completion: nil)
         }
       case .error:
-          break
+        break
       }
     })
   }

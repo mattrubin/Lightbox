@@ -70,7 +70,7 @@ class LightboxTransition: UIPercentDrivenInteractiveTransition {
           self.scrollView?.frame.origin.y = translation.y * 3
           controller.view.alpha = 0
           controller.view.backgroundColor = UIColor.black.withAlphaComponent(0)
-          }, completion: { _ in })
+        }, completion: { _ in })
       } else {
         cancel()
 
@@ -104,7 +104,7 @@ extension LightboxTransition: UIViewControllerAnimatedTransitioning {
     let container = transitionContext.containerView
 
     guard let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from),
-        let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)
+      let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)
       else { return }
 
     let firstView = dismissing ? toView : fromView
@@ -121,10 +121,10 @@ extension LightboxTransition: UIViewControllerAnimatedTransitioning {
 
     UIView.animate(withDuration: duration, animations: {
       self.transition(!self.dismissing)
-      }, completion: { _ in
-        transitionContext.transitionWasCancelled
-          ? transitionContext.completeTransition(false)
-          : transitionContext.completeTransition(true)
+    }, completion: { _ in
+      transitionContext.transitionWasCancelled
+        ? transitionContext.completeTransition(false)
+        : transitionContext.completeTransition(true)
     })
   }
 }
@@ -163,7 +163,7 @@ extension LightboxTransition: UIGestureRecognizerDelegate {
 
     if let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
       let translation = panGestureRecognizer.translation(in: gestureRecognizer.view)
-        if abs(translation.x) < abs(translation.y) {
+      if abs(translation.x) < abs(translation.y) {
         result = true
       }
     }

@@ -156,8 +156,8 @@ class PageView: UIScrollView {
 
   func configureImageView() {
     guard let image = imageView.image else {
-        centerImageView()
-        return
+      centerImageView()
+      return
     }
 
     let imageViewSize = imageView.frame.size
