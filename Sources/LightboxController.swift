@@ -71,7 +71,7 @@ open class LightboxController: UIViewController {
   open fileprivate(set) lazy var overlayView: UIView = { [unowned self] in
     let view = UIView(frame: CGRect.zero)
     let gradient = CAGradientLayer()
-    let colors = [UIColor(hex: "090909").withAlphaComponent(0), UIColor(hex: "040404")]
+    let colors = [UIColor(white: 9/255, alpha: 0), UIColor(white: 4/255, alpha: 1)]
 
     view.addGradientLayer(colors)
     view.alpha = 0

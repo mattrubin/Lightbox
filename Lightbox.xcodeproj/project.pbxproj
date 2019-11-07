@@ -11,7 +11,6 @@
 		C926B61121C3702400D68ED1 /* View+Imaginary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926B60F21C3702400D68ED1 /* View+Imaginary.swift */; };
 		C926B61221C3702400D68ED1 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926B61021C3702400D68ED1 /* ImageFetcher.swift */; };
 		D22006741DFB4D9700E92898 /* Lightbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22006731DFB4D9700E92898 /* Lightbox.bundle */; };
-		D2258CC4215CD035005A9A1C /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2258CC3215CD035005A9A1C /* Color+Extensions.swift */; };
 		D229B5E61FC3123F00F04123 /* Lightbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D523B0A91C43AA2A001AD1EC /* Lightbox.framework */; };
 		D229B5ED1FC3125D00F04123 /* InfoLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */; };
 		D2D71BBC1D54DA77006AB907 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D71BBB1D54DA77006AB907 /* AssetManager.swift */; };
@@ -47,7 +46,6 @@
 		C9B631DA21C30FF8005436BC /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C9B631DB21C30FF8005436BC /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		D22006731DFB4D9700E92898 /* Lightbox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Lightbox.bundle; sourceTree = "<group>"; };
-		D2258CC3215CD035005A9A1C /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		D229B5E11FC3123F00F04123 /* LightboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D229B5E51FC3123F00F04123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D229B5EC1FC3125D00F04123 /* InfoLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelTests.swift; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 				D573A2F41C5B5CA4006053DD /* LightboxTransition.swift */,
 				D573A2F21C5B5C7B006053DD /* LayoutConfigurable.swift */,
 				D573A2F61C5B5E55006053DD /* UIView+Gradient.swift */,
-				D2258CC3215CD035005A9A1C /* Color+Extensions.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -335,7 +332,6 @@
 				D58A18CB1C5ABF8F000024BB /* FooterView.swift in Sources */,
 				D573A2F01C5B5605006053DD /* HeaderView.swift in Sources */,
 				D573A2F51C5B5CA4006053DD /* LightboxTransition.swift in Sources */,
-				D2258CC4215CD035005A9A1C /* Color+Extensions.swift in Sources */,
 				166E3BA920333E04006799C1 /* LightboxImageStub.swift in Sources */,
 				C926B61121C3702400D68ED1 /* View+Imaginary.swift in Sources */,
 				D2D71BBC1D54DA77006AB907 /* AssetManager.swift in Sources */,
