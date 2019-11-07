@@ -209,7 +209,7 @@ class PageView: UIScrollView {
 
 // MARK: - LayoutConfigurable
 
-extension PageView: LayoutConfigurable {
+extension PageView {
 
   @objc func configureLayout() {
     contentFrame = frame

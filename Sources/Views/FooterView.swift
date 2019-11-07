@@ -111,7 +111,7 @@ open class FooterView: UIView {
 
 // MARK: - LayoutConfigurable
 
-extension FooterView: LayoutConfigurable {
+extension FooterView {
 
   @objc public func configureLayout() {
     infoLabel.frame = CGRect(x: 17, y: 0, width: frame.width - 17 * 2, height: 35)

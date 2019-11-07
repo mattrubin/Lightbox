@@ -145,7 +145,7 @@ open class InfoLabel: UILabel {
 
 // MARK: - LayoutConfigurable
 
-extension InfoLabel: LayoutConfigurable {
+extension InfoLabel {
 
   @objc public func configureLayout() {
     shortText = truncatedText
