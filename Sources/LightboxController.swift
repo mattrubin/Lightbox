@@ -157,6 +157,8 @@ open class LightboxController: UIViewController {
     self.config = config
 
     super.init(nibName: nil, bundle: nil)
+
+    modalPresentationStyle = .fullScreen
   }
 
   public required init?(coder aDecoder: NSCoder) {
