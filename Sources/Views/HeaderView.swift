@@ -93,7 +93,7 @@ open class HeaderView: UIView {
 
 // MARK: - LayoutConfigurable
 
-extension HeaderView: LayoutConfigurable {
+extension HeaderView {
 
   @objc public func configureLayout() {
     let topPadding: CGFloat

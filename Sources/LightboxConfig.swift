@@ -45,11 +45,11 @@ public struct LightboxConfig {
   public var pageIndicator = PageIndicator()
   public struct PageIndicator {
     public var enabled = true
-    public var separatorColor = UIColor(hex: "3D4757")
+    public var separatorColor = UIColor(red: 61/255, green: 71/255, blue: 87/255, alpha: 1)
 
     public var textAttributes: [NSAttributedString.Key: Any] = [
       .font: UIFont.systemFont(ofSize: 12),
-      .foregroundColor: UIColor(hex: "899AB8"),
+      .foregroundColor: UIColor(red: 137/255, green: 154/255, blue: 184/255, alpha: 1),
       .paragraphStyle: {
         var style = NSMutableParagraphStyle()
         style.alignment = .center
@@ -85,7 +85,7 @@ public struct LightboxConfig {
 
     public var textAttributes: [NSAttributedString.Key: Any] = [
       .font: UIFont.boldSystemFont(ofSize: 16),
-      .foregroundColor: UIColor(hex: "FA2F5B"),
+      .foregroundColor: UIColor(red: 250/255, green: 47/255, blue: 91/255, alpha: 1),
       .paragraphStyle: {
         var style = NSMutableParagraphStyle()
         style.alignment = .center
@@ -99,11 +99,11 @@ public struct LightboxConfig {
     public var enabled = true
     public var textColor = UIColor.white
     public var ellipsisText = NSLocalizedString("Show more", comment: "")
-    public var ellipsisColor = UIColor(hex: "899AB9")
+    public var ellipsisColor = UIColor(red: 137/255, green: 154/255, blue: 185/255, alpha: 1)
 
     public var textAttributes: [NSAttributedString.Key: Any] = [
       .font: UIFont.systemFont(ofSize: 12),
-      .foregroundColor: UIColor(hex: "DBDBDB")
+      .foregroundColor: UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1)
     ]
   }
 
